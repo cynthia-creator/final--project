@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather app</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <form id="search-form" class="mb-3">
+          <div class="row">
+            <div class="col-10">
+              <input
+                type="search"
+                placeholder="Enter your city..."
+                class="form-control"
+                id="city-search"
+                autocomplete="off"
+              />
+            </div>
+            <div class="col-2">
+              <input type="submit" value="Search" class="w-100" id="button" />
+            </div>
+          </div>
+        </form>
+        <div class="row">
+          <div class="col-8">
+            <h1 id="city"></h1>
+            <ul>
+              <li id="date"></li>
+              <br />
+              <li>
+                Humidity: <span id="humidity"></span>%, <br />Wind:
+                <span id="wind"></span>km/h
+              </li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <div>
+              <img src="" alt="" id="icon" />
+              <span id="temperature"></span>
+              <span id="units">°C</span>
+              <div id="condition"></div>
+            </div>
+          </div>
+        </div>
+        <div class="weather-forecast" id="weather-forecast"></div>
+        <hr />
+        <small>
+          <a
+            href="https://github.com/Reduviaa/vanilla-weather-app"
+            target="_blank"
+            rel="noreferrer"
+            >Open-sourse code</a
+          >
+          by Magdalena Tadeja
+        </small>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
